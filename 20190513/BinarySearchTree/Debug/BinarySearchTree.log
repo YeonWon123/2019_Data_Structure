@@ -1,0 +1,16 @@
+﻿  main.cpp
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(26): error C3861: 'nullTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(27): error C3861: 'nullTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(28): error C3861: 'leftTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(29): error C3861: 'rightTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(30): error C3861: 'treeData': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(32): error C3861: 'treeData': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(33): error C3861: 'treeData': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(34): error C3861: 'treeData': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(35): error C3861: 'leftTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(37): error C3861: 'rightTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(45): error C3861: 'nullTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(45): error C3861: 'treeData': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(47): error C3861: 'treeData': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(48): error C3861: 'leftTree': 식별자를 찾을 수 없습니다.
+d:\3학년 1학기\자료구조\20190513\binarysearchtree\bst.h(50): error C3861: 'rightTree': 식별자를 찾을 수 없습니다.

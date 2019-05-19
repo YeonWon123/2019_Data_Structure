@@ -1,0 +1,41 @@
+// node를 이용한 quicksort (List class에서, typedef Node *Link로 선언함)
+void List::quicksort(Link first, Link last)
+{
+	if (last != NULL && first != last && first != last->next)
+	{
+		Link pivot = partition(first, last);
+	
+		quicksort(first, pivot->prev);
+		quicksort(pivot->next, last);
+	}
+}
+
+List::Link List::partition(Link first, Link last)
+{
+	Link lastsmall = first;
+	Link i = first->next;
+	Link pivot = last->next;
+	Customer object;
+
+	for (; i != NULL; i = i->next)
+	{
+		if (i->elem.getArr_time() <= first->elem.getArr_time())
+		{
+			lastsmall = lastsmall->next;
+
+			// swapelements(lastsmall, i);
+			object = lastsmall->elem;
+			lastsmall->elem = i->elem;
+			i->elem = object;
+		}
+
+		if (i->next == pivot) break;
+	}
+
+	// swapelements(first, lastsmall);
+	object = first->elem;
+	first->elem = lastsmall->elem;
+	lastsmall->elem = object;
+
+	return lastsmall;
+}

@@ -1,0 +1,72 @@
+void List::quicksort()
+{
+	// first와 last를 구해서 밑의 quicksort를 호출한다.
+	ListElementType elem;
+	int first_num = 0;
+	int last_num = 0;
+
+	bool notEmpty(this->first(elem));
+	while (notEmpty) {
+		last_num++;
+		notEmpty = this->next(elem);
+	}
+	
+	quicksort(first_num, last_num-1);
+}
+
+// index를 이용한 Quicksort
+void List::quicksort(int first, int last)
+{
+	if (first >= last) return;
+	int lastSmall(first), i;
+	ListElementType elem;
+	Link link_1, link_2;
+	 
+	for (i = first + 1; i <= last; i++) {
+		
+		// i 인덱스에 있는 노드를 뽑기
+		this->first(elem);
+		for (int j = 0; j < i; j++)
+			this->next(elem);
+		link_1 = current;
+
+		// first 인덱스에 있는 노드를 뽑기
+		this->first(elem);
+		for (int j = 0; j < first; j++)
+			this->next(elem);
+		link_2 = current;
+
+		// 값을 비교해서 first보다 크면 
+		// lastsmall을 1 증가시킨 뒤 lastsmall과 i 인덱스에 있는 노드를 swap함
+		if (link_1->elem.getArr_time() <= link_2->elem.getArr_time()) {
+			++lastSmall;
+			this->first(elem);
+			for (int j = 0; j < lastSmall; j++)
+				this->next(elem);
+			link_2 = current;
+
+			this->swapLinkedList(link_2, link_1);
+		}
+	}
+
+	// 최종적으로, lastsmall과 first를 swap함.
+	int split = lastSmall;
+
+	// first에 해당하는 노드 찾기
+	this->first(elem);
+	for (int j = 0; j < first; j++)
+		this->next(elem);
+	link_1 = current;
+
+	// lastsmall에 해당하는 노드 찾기
+	this->first(elem);
+	for (int j = 0; j < lastSmall; j++)
+		this->next(elem);
+	link_2 = current;
+
+	this->swapLinkedList(link_1, link_2);
+
+	// pivot(여기서는 split)을 중심으로 좌우 재귀호출
+	quicksort(first, split - 1);
+	quicksort(split + 1, last);
+}

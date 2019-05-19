@@ -1,0 +1,9 @@
+if (head == 0 || elem <= head->elem) {
+	addedNode->next = head;
+	head = addedNode;
+	// 이부분 test!
+	if (head == 0)
+		tail = addedNode;
+}
+
+// 이게 시험문제라고..? 

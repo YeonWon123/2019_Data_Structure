@@ -1,0 +1,16 @@
+﻿  hw1.cpp
+c:\users\weonw\desktop\hw1-가반-김명원-20150375\hw1\hw1.cpp(8): warning C4091: '': 변수를 선언하지 않으면 'std::chrono::steady_clock' 왼쪽은 무시됩니다.
+c:\users\weonw\desktop\hw1-가반-김명원-20150375\hw1\hw1.cpp(187): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\weonw\desktop\hw1-가반-김명원-20150375\hw1\hw1.cpp(240): warning C4244: 'return': '_Rep'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Rep=__int64
+          ]
+c:\users\weonw\desktop\hw1-가반-김명원-20150375\hw1\hw1.cpp(255): warning C4244: 'return': '_Rep'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Rep=__int64
+          ]
+  measure.cpp
+  코드를 생성하고 있습니다...
+  hw1.vcxproj -> C:\Users\weonw\Desktop\HW1-가반-김명원-20150375\x64\Debug\hw1.exe

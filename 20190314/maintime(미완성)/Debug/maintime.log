@@ -1,0 +1,8 @@
+﻿  Time.cpp
+d:\3학년 1학기\자료구조\20190314\maintime\time.cpp(4): error C2600: 'Time::Time': 컴파일러 생성 특수 멤버 함수를 정의할 수 없습니다. 먼저 클래스에 선언해야 합니다.
+d:\3학년 1학기\자료구조\20190314\maintime\time.cpp(9): error C2600: 'Time::~Time': 컴파일러 생성 특수 멤버 함수를 정의할 수 없습니다. 먼저 클래스에 선언해야 합니다.
+  maintime.cpp
+d:\3학년 1학기\자료구조\20190314\maintime\maintime.cpp(54): error C2248: 'Time::minutes': private 멤버('Time' 클래스에서 선언)에 액세스할 수 없습니다.
+  d:\3학년 1학기\자료구조\20190314\maintime\time.h(40): note: 'Time::minutes' 선언을 참조하십시오.
+  d:\3학년 1학기\자료구조\20190314\maintime\time.h(7): note: 'Time' 선언을 참조하십시오.
+  코드를 생성하고 있습니다...
