@@ -1,0 +1,21 @@
+RB-INSERT(T, x) 
+	TREE-INSERT(T, x)
+	color[x] ← RED // only RB property 3 can be violated 
+	while x != root[T] and color[p[x]] == RED
+		do if p[x] == left[p[p[x]]]
+			then y ← right[p[p[x]] // y = aunt/uncle of x, 부모가 왼쪽에 있으니 삼촌은 오른쪽에 있음
+				if color[y] == RED 
+				then <Case 1>
+				else if x == right[p[x]]
+					then <Case 2> 	// "Left-Rotate(A)  
+							// Case 2 falls into Case 3 
+					<Case 3>	// "Right-Rotate(C)"
+			// else "then" clause with "left" and "right" swapped
+			else y <- left[p[p[x]]] // y = aunt/uncle of x, 부모가 오른쪽에 있으니 삼촌은 왼쪽에 있음
+				if color[y] == RED
+				then <Case 1>
+				else if x == left[p[x]]
+					then <Case 4> // "Right-Rotate(A)", different in case 2(영상에서는 case 2라고 퉁침) 
+						      // Case 4 falls into Case 5
+					<Case 5>      // "Left-Rotate(C)" , different in case 3(영상에서는 case 3라고 퉁침)
+	color[root[T]] ← BLACK

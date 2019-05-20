@@ -1,0 +1,42 @@
+< Red-Black Tree 소개, Insert > -> Delete의 경우 다음 시간에....
+
+*Red-Black Tree의 사용 목적
+ - Binary Search Tree에서, 트리의 노드가 한쪽으로 치우치는 현상을 방지하고자 도입됨
+ex) 1,2,3,4,5,6,7,8을 차례대로 입력하면 depth가 8인 Binary Search Tree가 만들어짐
+ -> 만약 8을 삽입하거나 검색하고자 하면 시간복잡도가 O(n)?!?! -> No!
+
+ - 따라서 노드에 색깔을 지정하고 일련의 규칙에 따라 Red-Black Tree를 구성하면, 트리의 노드가 균형잡히게 되어
+   삽입, 삭제, 검색 시에 O(log n)의 시간복잡도를 가지게 됨 (공간복잡도는 O(n))
+ - C++에서는 STL에 map으로 구현되어 있음
+
+*Red-Black Tree Insert의 sudo code
+
+RB-INSERT(T, x) 
+	TREE-INSERT(T, x)
+	color[x] ← RED // only RB property 3 can be violated 
+	while x != root[T] and color[p[x]] == RED
+		do if p[x] == left[p[p[x]]]
+			then y ← right[p[p[x]] // y = aunt/uncle of x, 부모가 왼쪽에 있으니 삼촌은 오른쪽에 있음
+				if color[y] == RED 
+				then <Case 1>
+				else if x == right[p[x]]
+					then <Case 2> 	// "Left-Rotate(A)  
+							// Case 2 falls into Case 3 
+					<Case 3>	// "Right-Rotate(C)"
+			// else "then" clause with "left" and "right" swapped
+			else y <- left[p[p[x]]] // y = aunt/uncle of x, 부모가 오른쪽에 있으니 삼촌은 왼쪽에 있음
+				if color[y] == RED
+				then <Case 1>
+				else if x == left[p[x]]
+					then <Case 4> // "Right-Rotate(A)", different in case 2(영상에서는 case 2로 표현, 방향만 다름) 
+						      // Case 4 falls into Case 5
+					<Case 5>      // "Left-Rotate(C)" , different in case 3(영상에서는 case 3로 표현, 방향만 다름)
+	color[root[T]] ← BLACK	// 루트 노드는 항상 검은색으로 처리
+
+
+** 참고할 만한 사이트
+https://www.youtube.com/watch?v=PhY56LpCtP4 -> 수업시간에 보여준 youtube 동영상
+https://www.cs.usfca.edu/~galles/visualization/RedBlack.html -> Red-Black tree의 insert와 delete를 해 볼 수 있음
+
+https://zeddios.tistory.com/237 -> 한글 설명, 그림 많음
+https://en.wikipedia.org/wiki/Red%E2%80%93black_tree -> 영어 설명, Red-Black tree에서 시간복잡도 증명, Case, Sudo code와 실제 구현 코드 제공
